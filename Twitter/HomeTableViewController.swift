@@ -24,6 +24,11 @@ class HomeTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadTweets()
+    }
+    
     func loadTweets(){
         
         let url = "https://api.twitter.com/1.1/statuses/home_timeline.json"
